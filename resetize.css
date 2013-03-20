@@ -89,6 +89,12 @@ video {
   vertical-align: top;
 }
 
+input,
+select,
+textarea {
+  margin: 0;
+}
+
 article,
 aside,
 details,
