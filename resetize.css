@@ -166,6 +166,6 @@ hr {
 input, 
 button,
 select {
-  vertical-align: middle;
+  vertical-align: baseline;
   margin: 0;
 }
