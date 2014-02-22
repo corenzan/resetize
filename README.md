@@ -21,6 +21,8 @@ The baseline for the project is the CSS reset from [HTML5 Doctor](http://html5do
 - Reset the `margin` of form elements to `0`
 - Changed `hr` color to `gray`
 - Left the tags `b`, `strong`, `i` and `em` styled
+- Added `min-height` to `html` and `body`
+- Set `box-sizing` as `border-box` to all elements
 
 ## I have few ideas of my own...
 
