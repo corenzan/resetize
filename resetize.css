@@ -169,9 +169,10 @@ hr {
   padding: 0;
 }
 
-input, 
 button,
-select {
+input,
+select,
+textarea {
   vertical-align: baseline;
   margin: 0;
 }
