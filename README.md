@@ -1,28 +1,23 @@
 # Resetize.css
 
-> CSS [reset](http://html5doctor.com/html-5-reset-stylesheet/) meets [normalize](http://necolas.github.com/normalize.css/).
-
----
+> An opinionated CSS reset.
 
 ## Rese.. what ?
 
-The thing is I like the principles of normalize, but I miss the bar of CSS reset.
+At first I wanted to merge [normalize.css](http://necolas.github.io/normalize.css/) with a CSS reset, that's why the name is _resetize_.
 
-I usually style `<b>` and `<strong>` to render in bold, `<code>` and `<pre>` using monospaced font face, etc. They are very common and don't change often.
+But then I moved on to use a CSS reset with a few normalizations.
 
-But I use to manually set the proportions between body text size and headings, white space between elements, and other stuff like that, they're very particular to the project being worked on.
+## And what is it like ?
 
-**Resetize** is that, an opinionated marriage between the two.
+The baseline for the project is the CSS reset from [HTML5 Doctor](http://html5doctor.com/), with a couple of changes:
 
-## OK, but what did you change ?
-
-The baseline for the project is the CSS reset from [HTML5 Doctor](http://html5doctor.com/). Actually very little was changed;
-
-- Reset the `margin` of form elements to `0`
-- Changed `hr` color to `gray`
-- Left the tags `b`, `strong`, `i` and `em` styled
-- Added `min-height` to `html` and `body`
-- Set `box-sizing` as `border-box` to all elements
+- Changed `line-height` to `1.4` (it's a nice baseline and also prevents a few text rendering bugs)
+- Reset the `margin` of form elements
+- Changed `hr` color to `inherit`
+- Left text formatting tags styled (like `b`, `strong`, `em`, `del`, `acronym`, etc..)
+- Added [box-sizing reset](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
+- Fix body height (set `background: none` on `html`)
 
 ## I have few ideas of my own...
 
