@@ -18,6 +18,7 @@ The baseline for the project is the CSS reset from [HTML5 Doctor](http://html5do
 - Left text formatting tags styled (like `b`, `strong`, `em`, `del`, `acronym`, etc..)
 - Added [box-sizing reset](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
 - Fix body height (set `background: none` on `html`)
+- Remove `margin` from `hr`
 
 ## I have few ideas of my own...
 
