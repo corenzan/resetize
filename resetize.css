@@ -1,4 +1,4 @@
-/* resetize.css v2.2 - https://github.com/haggen/resetize */
+/* https://github.com/haggen/resetize */
 
 *,
 *:after,
@@ -84,13 +84,14 @@ video {
   border: 0;
   outline: 0;
   font-size: 100%;
-  font-weight: 400;
+  font-weight: inherit;
   vertical-align: baseline;
   background: transparent;
 }
 
 body {
-  line-height: 1.4;
+  line-height: 1.2;
+  font-weight: 400;
 }
 
 article,
@@ -112,6 +113,7 @@ strong {
   font-weight: 700;
 }
 
+nav ol,
 nav ul {
   list-style: none;
 }
@@ -163,6 +165,10 @@ dfn[title] {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+caption {
+  text-align: left;
 }
 
 hr {
