@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-html {
-  background: none;
-}
-
 html,
 body,
 div,
@@ -113,7 +109,6 @@ strong {
   font-weight: 700;
 }
 
-nav ol,
 nav ul {
   list-style: none;
 }
@@ -167,6 +162,7 @@ table {
   border-spacing: 0;
 }
 
+th,
 caption {
   text-align: left;
 }
