@@ -6,7 +6,7 @@
 
 At first I wanted to merge [normalize.css](http://necolas.github.io/normalize.css/) with a CSS reset, that's why the name is _resetize_.
 
-But then I moved on to use a CSS reset with a few _normalizations_.
+But then I moved on to a CSS reset with a few _normalizations_.
 
 ## And what is it like ?
 
@@ -17,7 +17,7 @@ The baseline for the project is the CSS reset from [HTML5 Doctor](http://html5do
 - Changed `hr` color to `inherit` and reset its margin
 - Left text formatting tags styled (like `b`, `strong`, `em`, `del`, `acronym`, etc..)
 - Added [box-sizing reset](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
-- Fixed body height (a.k.a. set `background: none` on `html`)
+- Reset `th`'s `text-align` to `left`
 
 ## I have few ideas of my own...
 
