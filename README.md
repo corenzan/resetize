@@ -2,26 +2,18 @@
 
 > An opinionated CSS reset.
 
-## Rese.. what ?
+## About
 
-At first I wanted to merge [normalize.css](http://necolas.github.io/normalize.css/) with a CSS reset, that's why the name is _resetize_.
+The stylesheet extends from [normalize.css](http://necolas.github.io/normalize.css/), version 3.0.2, adding resets:
 
-But then I moved on to a CSS reset with a few _normalizations_.
+- (un)ordered lists;
+- padding, margin, and line-height;
+- box-sizing set to border-box;
+- input ornaments (number spinner, search clear button, etc.);
 
-## And what is it like ?
+## Feedback
 
-The baseline for the project is the CSS reset from [HTML5 Doctor](http://html5doctor.com/), with a couple of changes:
-
-- Changed `line-height` to `1.2`
-- Removed `margin` from form elements
-- Changed `hr` color to `inherit` and reset its margin
-- Left text formatting tags styled (like `b`, `strong`, `em`, `del`, `acronym`, etc..)
-- Added [box-sizing reset](http://www.paulirish.com/2012/box-sizing-border-box-ftw/)
-- Reset `th`'s `text-align` to `left`
-
-## I have few ideas of my own...
-
-Great! Let me know what you think, what are your findings and what makes it easier for you to write your layouts. Go open an issue and propose some changes, I'd love to hear from you!
+Great! Let me know what you think, go open an issue or propose some changes, I'd love to hear from you!
 
 # License
 
