@@ -1,12 +1,4 @@
-/* https://github.com/haggen/resetize */
-
-html {
-  background: transparent;
-  box-sizing: border-box;
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
+/* //github.com/haggen/resetize */
 
 *,
 *:after,
@@ -19,9 +11,18 @@ html {
   vertical-align: baseline;
 }
 
+html {
+  background: transparent;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background: white;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 article,
