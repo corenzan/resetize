@@ -4,17 +4,17 @@
 
 ## About
 
-The stylesheet extends from [normalize.css](http://necolas.github.io/normalize.css/), version 3.0.2, adding resets:
+The stylesheet extends from [normalize.css](http://necolas.github.io/normalize.css/), version 3.0.2, and adds resets:
 
-- (un)ordered lists;
-- padding, margin, and line-height;
-- box-sizing set to border-box;
-- input ornaments (number spinner, search clear button, etc.);
+- Remove bullets from (un)ordered lists.
+- Remove paddings and margins.
+- Set `box-sizing` of all elements to `inherit` and set `html`'s to `border-box`.
+- Remove input ornaments (number spinner, search clear button, etc).
 
 ## Feedback
 
-Great! Let me know what you think, go open an issue or propose some changes, I'd love to hear from you!
+Let me know what you think! You can open an issue, discuss and propose changes, or even send me a pull request.
 
 # License
 
-See [CC Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/deed.en_US)
+See [CC Attribution-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-sa/4.0/deed.en_US).
