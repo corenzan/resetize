@@ -4,7 +4,7 @@
 
 ## About
 
-The stylesheet extends from [normalize.css](http://necolas.github.io/normalize.css/), version 3.0.2, and adds resets:
+The stylesheet extends from [normalize.css](http://necolas.github.io/normalize.css/), version 4.1.1, and adds resets:
 
 - Remove bullets from (un)ordered lists.
 - Remove paddings and margins.
