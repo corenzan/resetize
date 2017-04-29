@@ -1,4 +1,4 @@
-# Resetize.css
+# Resetize
 
 > An opinionated CSS reset.
 
@@ -17,4 +17,4 @@ Let me know what you think! You can open an issue, discuss and propose changes, 
 
 ## License
 
-MIT. See [LICENSE.md](LICENSE.md) for full notice.
+Both normalize.css and resetize.css are licensed under MIT. See [LICENSE.md](LICENSE.md) for full notice.
