@@ -4,17 +4,13 @@
 
 ## About
 
-The stylesheet extends from [normalize.css](http://necolas.github.io/normalize.css/) version 6, then adds some resets:
-
-- Remove bullets from (un)ordered lists.
-- Remove paddings and margins.
-- Set `box-sizing` of all elements to `inherit` and set root's to `border-box`.
-- Remove input ornaments (number spinner, search clear button, etc).
-
-## Feedback
-
-Let me know what you think! You can open an issue, discuss and propose changes, or even send me a pull request.
+**Resetize.css** extends [sanitize.css](http://github.com/jonathantneal/sanitize.css) version 5.0.0 only adding a few tweaks
+and resets.
 
 ## License
 
-Both normalize.css and resetize.css are licensed under MIT. See [LICENSE.md](LICENSE.md) for full notice.
+- normalize.css under The MIT License © Nicolas Gallagher and Jonathan Neal
+- sanitize.css under CC0 1.0 Universal License
+- resetize.css udner The MIT License © Arthur Corenzan
+
+See [LICENSE.md](LICENSE.md) for full notice.
