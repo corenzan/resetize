@@ -1,26 +1,30 @@
-/* https://github.com/corenzan/resetize */
+/* https://github.com/corenzan/resetize 3.0.0 © The MIT License */
 
-*,
-*:after,
-*:before {
-  box-sizing: inherit;
-  font: inherit;
-  font-size: 1em;
+* {
   margin: 0;
   padding: 0;
-  vertical-align: baseline;
+}
+
+*,
+::before,
+::after {
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
 }
 
 html {
   background-color: transparent;
   box-sizing: border-box;
-  font: 16px/1.5 sans-serif;
+  cursor: default;
+	font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-
-body {
-  background-color: white;
 }
 
 article,
@@ -32,9 +36,18 @@ section {
   display: block;
 }
 
-ul,
-ol {
-  list-style: none;
+body {
+	background-color: white;
+	font: 1em/1.5 sans-serif;
+}
+
+h1,
+h2.
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
 }
 
 figcaption,
@@ -49,8 +62,14 @@ hr {
   overflow: visible;
 }
 
+nav ol,
+nav ul {
+  list-style: none;
+}
+
 pre {
   font-family: monospace, monospace;
+  font-size: 1em;
 }
 
 a {
@@ -86,8 +105,8 @@ dfn {
 }
 
 mark {
-  background-color: #ff0;
-  color: #000;
+  background-color: #ffff00;
+  color: #000000;
 }
 
 small {
@@ -110,6 +129,27 @@ sup {
   top: -.5em;
 }
 
+::-moz-selection {
+  background-color: #b3d4fc;
+  color: #000000;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #b3d4fc;
+  color: #000000;
+  text-shadow: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
 audio,
 video {
   display: inline-block;
@@ -124,8 +164,26 @@ img {
   border-style: none;
 }
 
+svg {
+  fill: currentColor;
+}
+
 svg:not(:root) {
   overflow: hidden;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+button,
+input,
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 button,
@@ -174,6 +232,7 @@ progress {
 
 textarea {
   overflow: auto;
+  resize: vertical;
 }
 
 [type="checkbox"],
@@ -183,7 +242,6 @@ textarea {
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
   height: auto;
 }
 
@@ -200,11 +258,6 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
-}
-
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: .5;
 }
 
 details,
@@ -224,6 +277,37 @@ template {
   display: none;
 }
 
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
 [hidden] {
   display: none;
+}
+
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+[aria-hidden="false"][hidden]:not(:focus) {
+  clip: rect(0, 0, 0, 0);
+  display: inherit;
+  position: absolute;
+}
+
+[aria-disabled] {
+  cursor: default;
 }
