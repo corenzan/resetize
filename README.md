@@ -15,8 +15,8 @@
 
 ## License
 
-- normalize.css under The MIT License © Nicolas Gallagher and Jonathan Neal
-- sanitize.css under CC0 1.0 Universal License
-- resetize.css udner The MIT License © Arthur Corenzan
+- normalize.css is under The MIT License © Nicolas Gallagher and Jonathan Neal
+- sanitize.css is under CC0 1.0 Universal License
+- resetize.css is under The MIT License © Arthur Corenzan
 
 See [LICENSE.md](LICENSE.md) for full notice.
