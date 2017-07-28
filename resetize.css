@@ -1,6 +1,7 @@
-/* https://github.com/corenzan/resetize 3.0.0 © The MIT License */
+/* https://github.com/corenzan/resetize 18 */
 
 * {
+  font-weight: inherit;
   margin: 0;
   padding: 0;
 }
@@ -18,11 +19,15 @@
   vertical-align: inherit;
 }
 
+:focus {
+  outline: 0;
+}
+
 html {
   background-color: transparent;
   box-sizing: border-box;
   cursor: default;
-	font-size: 16px;
+  font-size: 16px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -37,8 +42,8 @@ section {
 }
 
 body {
-	background-color: white;
-	font: 1em/1.5 sans-serif;
+  background-color: white;
+  font: 1em/1.5 sans-serif;
 }
 
 h1,
@@ -81,11 +86,6 @@ abbr[title] {
   border-bottom: none;
   text-decoration: underline;
   text-decoration: underline dotted;
-}
-
-b,
-strong {
-  font-weight: inherit;
 }
 
 b,
@@ -240,11 +240,6 @@ textarea {
   box-sizing: border-box;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
 [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
@@ -255,9 +250,34 @@ textarea {
   -webkit-appearance: none;
 }
 
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+[type="number"] {
+  -moz-appearance: textfield;
+}
+
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, .5);
+}
+
+::-moz-placeholder {
+  color: rgba(0, 0, 0, .5);
+}
+
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, .5);
+}
+
+:-moz-placeholder {
+  color: rgba(0, 0, 0, .5);
 }
 
 details,
