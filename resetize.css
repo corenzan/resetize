@@ -1,4 +1,4 @@
-/* https://github.com/corenzan/resetize 20 */
+/* https://github.com/corenzan/resetize 21 */
 
 * {
   font-weight: inherit;
@@ -184,6 +184,8 @@ button,
 input,
 select,
 textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
