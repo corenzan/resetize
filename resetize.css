@@ -67,8 +67,8 @@ hr {
   overflow: visible;
 }
 
-nav ol,
-nav ul {
+ol,
+ul {
   list-style: none;
 }
 
