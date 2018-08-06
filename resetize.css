@@ -180,6 +180,10 @@ th {
   text-align: inherit;
 }
 
+fieldset {
+  border: 0;
+}
+
 button,
 input,
 select,
