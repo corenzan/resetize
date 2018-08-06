@@ -4,14 +4,13 @@
 
 ## About
 
-**Resetize.css** extends [sanitize.css](http://github.com/jonathantneal/sanitize.css) version 5.0.0 and then:
+**Resetize.css** extends [sanitize.css](http://github.com/jonathantneal/sanitize.css) version 6.0.0 and then:
 
-- Remove paddings and margins.
-- Set font weight to inherit on everything.
-- Reset font size on everything.
-- Set line height, font size, family, color and background color on the document.
-- Normalize input placeholder.
-- Hide numeric input spinners.
+- Set text to 16px/1.5 sans-serif, black on white.
+- Reset font-size, padding, and margin.
+- Reset input placeholder.
+- Reset input appearance.
+- Reset lists and fieldset.
 
 ## License
 
