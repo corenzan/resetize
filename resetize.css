@@ -97,7 +97,7 @@ svg {
   fill: currentColor;
 }
 
-svg:not(: root) {
+svg:not(:root) {
   overflow: hidden;
 }
 
@@ -225,7 +225,7 @@ textarea,
   cursor: disabled;
 }
 
-[aria-hidden="false"][hidden]:not(: focus) {
+[aria-hidden="false"][hidden]:not(:focus) {
   clip: rect(0, 0, 0, 0);
   display: inherit;
   position: absolute;
