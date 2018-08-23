@@ -1,0 +1,30 @@
+{
+  "name": "resetize",
+  "version": "24.0.0",
+  "description": "An opinionated CSS reset",
+  "main": "resetize.css",
+  "style": "resetize.css",
+  "files": [
+    "LICENSE.md",
+    "resetize.css"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "postcss -o resetize.css src/*.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corenzan/resetize.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/corenzan/resetize/issues"
+  },
+  "homepage": "https://github.com/corenzan/resetize#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.1.3",
+    "cssnano": "^4.0.5",
+    "cssnano-preset-advanced": "^4.0.0",
+    "postcss-cli": "^6.0.0"
+  }
+}
