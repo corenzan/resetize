@@ -237,6 +237,10 @@ textarea {
   -webkit-appearance: none;
 }
 
+::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
 ::-webkit-file-upload-button {
   -webkit-appearance: none;
   font: inherit;
