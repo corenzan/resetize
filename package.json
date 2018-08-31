@@ -1,6 +1,6 @@
 {
   "name": "resetize",
-  "version": "24.2.0",
+  "version": "24.3.0",
   "description": "An opinionated CSS reset",
   "main": "resetize.css",
   "style": "resetize.css",
@@ -11,8 +11,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "postcss -o resetize.css src/*.css",
-    "preversion": "sed -i \"s/$npm_package_version/%version%/\" src/resetize.css",
-    "postversion": "sed -i \"s/%version%/$npm_package_version/\" src/resetize.css"
+    "preversion": "sed -i -e \"s/$npm_package_version/%version%/\" src/resetize.css",
+    "version": "sed -i -e \"s/%version%/$npm_package_version/\" src/resetize.css && npm run build"
   },
   "repository": {
     "type": "git",
