@@ -164,6 +164,7 @@ textarea,
 [type="button"],
 [type="reset"],
 [type="submit"] {
+  border-radius: 0;
   -webkit-appearance: none;
 }
 
