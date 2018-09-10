@@ -1,6 +1,6 @@
 {
   "name": "resetize",
-  "version": "24.3.0",
+  "version": "24.4.0",
   "description": "An opinionated CSS reset",
   "main": "dist/resetize.css",
   "style": "dist/resetize.css",
