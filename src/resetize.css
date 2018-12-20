@@ -92,8 +92,8 @@ small {
 }
 
 ::selection {
-  background-color: rgba(0, 255, 255, 0.5);
-  color: white;
+  background-color: rgba(0, 255, 255, 0.25);
+  color: midnightblue;
   text-shadow: none;
 }
 
