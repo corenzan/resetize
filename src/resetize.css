@@ -132,6 +132,10 @@ table {
   border-collapse: collapse;
 }
 
+th {
+  text-align: left;
+}
+
 fieldset {
   border: 0;
 }
