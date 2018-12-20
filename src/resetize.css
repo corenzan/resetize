@@ -167,7 +167,7 @@ textarea,
 [type="reset"],
 [type="submit"] {
   border-radius: 0;
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 input {
