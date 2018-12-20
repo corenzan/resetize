@@ -92,7 +92,7 @@ small {
 }
 
 ::selection {
-  background-color: dimgray;
+  background-color: rgba(0, 255, 255, 0.5);
   color: white;
   text-shadow: none;
 }
