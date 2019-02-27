@@ -1,17 +1,18 @@
 {
   "name": "resetize",
-  "version": "24.5.0",
-  "description": "An opinionated CSS reset",
+  "version": "25.0.0",
+  "description": "An opinionated CSS reset.",
   "main": "dist/resetize.css",
   "style": "dist/resetize.css",
   "files": [
+    "README.md",
     "LICENSE.md",
-    "resetize.css"
+    "dist/resetize.css"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo $npm_package_version",
     "build": "postcss -m -o dist/resetize.css src/*.css",
-    "version": "sed -ie \"s/\\$version/$npm_package_version/\" dist/resetize.css"
+    "version": "npm run build && sed -i \"\" -e \"s/\\$version/$npm_package_version/\" dist/resetize.css && git add dist/"
   },
   "repository": {
     "type": "git",
