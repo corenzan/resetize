@@ -1,7 +1,6 @@
-/*! https://github.com/corenzan/resetize.css 24.5.0 */
+/*! github.com/corenzan/resetize.css $version */
 
 * {
-  font-weight: inherit;
   margin: 0;
   padding: 0;
 }
@@ -22,14 +21,13 @@
 html {
   background-color: transparent;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-    Oxygen, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Cantarell, Oxygen,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
   font-size: 16px;
   line-height: 1.5;
   cursor: default;
   tab-size: 4;
-  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   word-break: break-word;
 }
@@ -44,11 +42,14 @@ h6 {
 }
 
 hr {
-  height: 0;
+  background-color: gray;
+  border: 0;
+  height: 1px;
   overflow: visible;
 }
 
-main {
+main,
+details {
   display: block;
 }
 
@@ -57,8 +58,11 @@ ul {
   list-style: none;
 }
 
-pre {
-  font-family: Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Oxygen Mono,
+pre,
+kbd,
+code,
+samp {
+  font-family: Menlo, Consolas, Roboto Mono, Courier, Oxygen Mono,
     Liberation Mono, monospace;
   font-size: 1em;
 }
@@ -79,22 +83,8 @@ strong {
   font-weight: bolder;
 }
 
-code,
-kbd,
-samp {
-  font-family: Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Oxygen Mono,
-    Liberation Mono, monospace;
-  font-size: 1em;
-}
-
 small {
-  font-size: 80%;
-}
-
-::selection {
-  background-color: rgba(0, 255, 255, 0.25);
-  color: midnightblue;
-  text-shadow: none;
+  font-size: 0.75em;
 }
 
 audio,
@@ -120,16 +110,14 @@ img {
   border-style: none;
 }
 
-svg {
-  fill: currentColor;
-}
-
 svg:not(:root) {
   overflow: hidden;
 }
 
 table {
   border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
 }
 
 th {
@@ -142,15 +130,16 @@ fieldset {
 
 button,
 input,
-select {
-  margin: 0;
-}
-
-button,
-input,
 select,
-textarea {
+textarea,
+[type="search"],
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  appearance: none;
+  background-color: transparent;
   border: 0;
+  border-radius: 0;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -160,18 +149,6 @@ textarea {
 button {
   overflow: visible;
   text-transform: none;
-}
-
-button,
-input,
-select,
-textarea,
-[type="search"],
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  border-radius: 0;
-  appearance: none;
 }
 
 input {
@@ -230,54 +207,12 @@ input[type="search"]::-webkit-search-results-decoration {
   font: inherit;
 }
 
-details {
-  display: block;
-}
-
-dialog {
-  background-color: white;
-  border: solid;
-  color: black;
-  display: block;
-  height: -moz-fit-content;
-  height: -webkit-fit-content;
-  height: fit-content;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  right: 0;
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
-  width: fit-content;
-}
-
-dialog:not([open]) {
-  display: none;
-}
-
 summary {
   display: list-item;
 }
 
-canvas {
-  display: inline-block;
-}
-
 template {
   display: none;
-}
-
-a,
-area,
-button,
-input,
-label,
-select,
-summary,
-textarea,
-[tabindex] {
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
 }
 
 [hidden] {
@@ -292,13 +227,27 @@ textarea,
   cursor: pointer;
 }
 
-[aria-disabled],
-[disabled] {
-  cursor: disabled;
+[disabled],
+[aria-disabled] {
+  cursor: not-allowed;
 }
 
-[aria-hidden="false"][hidden]:not(:focus) {
-  clip: rect(0, 0, 0, 0);
-  display: inherit;
-  position: absolute;
+@media print {
+  html {
+    font-size: 16px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    break-after: avoid;
+  }
+
+  @page {
+    size: letter portrait;
+    margin: 10%;
+  }
 }
