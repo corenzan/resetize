@@ -1,7 +1,7 @@
 {
   "name": "resetize",
   "version": "25.0.0",
-  "description": "An opinionated CSS reset.",
+  "description": "CSS normalization with opinionated resets.",
   "main": "dist/resetize.css",
   "style": "dist/resetize.css",
   "files": [
@@ -12,6 +12,7 @@
   "scripts": {
     "test": "echo $npm_package_version",
     "build": "postcss -m -o dist/resetize.css src/*.css",
+    "watch": "npm run build -- -w",
     "version": "npm run build && sed -i \"\" -e \"s/\\$version/$npm_package_version/\" dist/resetize.css && git add dist/"
   },
   "repository": {
@@ -24,8 +25,8 @@
   },
   "homepage": "https://github.com/corenzan/resetize#readme",
   "devDependencies": {
-    "cssnano": "^4.1.7",
-    "cssnano-preset-advanced": "^4.0.5",
-    "postcss-cli": "^6.1.0"
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "postcss-cli": "^6.1.2"
   }
 }
