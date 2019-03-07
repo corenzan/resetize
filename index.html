@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <title>Test display of HTML elements</title>
-    <link rel="stylesheet" href="src/resetize.css" />
+    <link rel="stylesheet" href="dist/resetize.css">
   </head>
   <body>
     <h1>Testing display of HTML elements</h1>
@@ -56,7 +57,7 @@ This is preformatted text wrapped in a <code>pre</code> element. Whitespace
     </p>
     <address>
       <a href="../personal.html" hreflang="en" lang="fi">Jukka Korpela</a>,
-      <a href="mailto:jkorpela@cs.tut.fi">jkorpela@cs.tut.fi</a><br />
+      <a href="mailto:jkorpela@cs.tut.fi">jkorpela@cs.tut.fi</a><br>
       Päivänsäteenkuja 4 A, Espoo, Finland
     </address>
     <h2>Lists</h2>
@@ -266,7 +267,7 @@ This is preformatted text wrapped in a <code>pre</code> element. Whitespace
     <h2>Forms</h2>
     <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi">
       <div>
-        <input type="hidden" value="42" /> This is a form containing various
+        <input type="hidden" value="42"> This is a form containing various
         fields (with some initial values (defaults) set, so that you can see how
         input text looks like without actually typing it):
       </div>
@@ -275,7 +276,7 @@ This is preformatted text wrapped in a <code>pre</code> element. Whitespace
           >Button:
           <button type="submit" value="bar">
             <label for="but"
-              >A cool<br />
+              >A cool<br>
               button</label
             >
           </button></label
@@ -284,15 +285,15 @@ This is preformatted text wrapped in a <code>pre</code> element. Whitespace
       <div>
         <label for="f0"
           >Reset button: <input type="reset" value="Reset"
-        /></label>
+      ></label>
       </div>
       <div>
         <label for="f1"
           >Single-line text input field: <input size="20" value="Default text."
-        /></label>
+      ></label>
       </div>
       <div>
-        <label for="f2">Multi-line text input field (textarea):</label><br />
+        <label for="f2">Multi-line text input field (textarea):</label><br>
         <textarea cols="20" rows="2">Default text.</textarea>
       </div>
       <div>
@@ -303,12 +304,12 @@ This is preformatted text wrapped in a <code>pre</code> element. Whitespace
         <legend>Legend</legend>
         <div>
           <label for="f3"
-            ><input type="radio" value="1" /> Radio button 1</label
+            ><input type="radio" value="1"> Radio button 1</label
           >
         </div>
         <div>
           <label for="f4"
-            ><input checked type="radio" value="2" /> Radio button 2 (initially
+            ><input checked type="radio" value="2"> Radio button 2 (initially
             checked)</label
           >
         </div>
@@ -316,11 +317,11 @@ This is preformatted text wrapped in a <code>pre</code> element. Whitespace
       <fieldset>
         <legend>Check those that apply</legend>
         <div>
-          <label for="f5"><input type="checkbox" /> Checkbox 1</label>
+          <label for="f5"><input type="checkbox"> Checkbox 1</label>
         </div>
         <div>
           <label for="f6"
-            ><input checked type="checkbox" /> Checkbox 2 (initially
+            ><input checked type="checkbox"> Checkbox 2 (initially
             checked)</label
           >
         </div>
@@ -340,7 +341,7 @@ This is preformatted text wrapped in a <code>pre</code> element. Whitespace
         <label for="f11"
           >A <code>select</code> element with
           <code>size="3"</code> (listbox):</label
-        ><br />
+        ><br>
         <select size="3">
           <option> one </option>
           <option selected> two (default) </option>
@@ -350,7 +351,7 @@ This is preformatted text wrapped in a <code>pre</code> element. Whitespace
       <div>
         <label for="f99"
           >Submit button: <input type="submit" value="Just a test"
-        /></label>
+      ></label>
       </div>
     </form>
     <h2>Tables</h2>
