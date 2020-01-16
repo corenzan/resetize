@@ -146,7 +146,7 @@ textarea {
 }
 
 /*
- * Remove clear button from text fields.
+ * Remove clear button from text fields in IE/Legacy Edge.
  */
 
 input::-ms-clear {
@@ -154,7 +154,7 @@ input::-ms-clear {
 }
 
 /*
- * Remove reveal button from password fields.
+ * Remove reveal button from password fields in IE/Legacy Edge.
  */
 
 input[type="password"]::-ms-reveal {
@@ -179,18 +179,19 @@ input[type="number"]::-webkit-outer-spin-button {
  */
 
 input[type="color"] {
+  vertical-align: middle;
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
-  all: initial;
+  padding: 0;
 }
 
 input[type="color"]::-webkit-color-swatch {
-  all: initial;
+  border: 0;
 }
 
 input[type="color"]::-moz-color-swatch {
-  all: initial;
+  border: 0;
 }
 
 /*
