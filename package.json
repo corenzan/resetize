@@ -10,10 +10,11 @@
     "dist/resetize.css"
   ],
   "scripts": {
-    "test": "echo $npm_package_version",
-    "build": "postcss -m -o dist/resetize.css src/*.css",
-    "watch": "npm run build -- -w",
-    "version": "npm run build && sed -i \"\" -e \"s/\\$version/$npm_package_version/\" dist/resetize.css && git add dist/"
+    "test": "echo See index.html >&2 && exit 1",
+    "watch": "npm run-script build -- -w",
+    "build": "postcss -m -o dist/resetize.css src/resetize.css",
+    "postbuild": "sed -i -e \"s/\\$npm_package_version/$npm_package_version/\" dist/resetize.css",
+    "version": "npm run-script build && git add dist"
   },
   "repository": {
     "type": "git",
