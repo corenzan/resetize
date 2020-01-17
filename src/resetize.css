@@ -290,7 +290,12 @@ progress::-ms-fill {
  * Customize input placeholder.
  */
 
-input::-webkit-input-placeholder {
+input::placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+input:-ms-input-placeholder {
   color: inherit;
   opacity: 0.5;
 }
