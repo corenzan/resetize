@@ -230,24 +230,23 @@ input[type="range"] {
   vertical-align: middle;
 }
 
-input[type="range"]::-webkit-slider-runnable-track {
-  all: initial;
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-  all: initial;
+input[type="range"]::-webkit-slider-runnable-track {
 }
 
 input[type="range"]::-moz-range-thumb {
-  all: initial;
+  background: none;
+  border: 0;
+  border-radius: 0;
 }
 
 input[type="range"]::-moz-range-track {
-  all: initial;
 }
 
 input[type="range"]::-moz-range-progress {
-  all: initial;
 }
 
 input[type="range"]::-ms-track {
