@@ -7,9 +7,8 @@ on: [push]
 
 jobs:
   publish-npm:
-    needs: build
-    if: contains(github.ref, 'tags')
     runs-on: ubuntu-latest
+    if: contains(github.ref, 'tags')
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
