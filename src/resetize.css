@@ -3,9 +3,13 @@
  *! https://github.com/corenzan/resetize
  */
 
+/**
+ * Inherit sanitize.css.
+ */
+
 @import "sanitize.css";
 
-/*
+/**
  * Use the default user interface font in all browsers (opinionated).
  */
 
@@ -18,7 +22,15 @@ html {
     /* Windows emoji */ "Segoe UI Symbol", /* Linux emoji */ "Noto Color Emoji";
 }
 
-/*
+/**
+ * Use smooth scroll but only when on focus to avoid issues with find in page.
+ */
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/**
  * Use the default monospace user interface font in all browsers (opinionated).
  */
 
@@ -35,7 +47,7 @@ pre {
     /* Windows emoji */ "Segoe UI Symbol", /* Linux emoji */ "Noto Color Emoji";
 }
 
-/*
+/**
  * Restrict sizing to the page width in all browsers (opinionated).
  */
 
@@ -48,7 +60,7 @@ textarea {
   max-width: 100%;
 }
 
-/*
+/**
  * Reset font-size, padding and margin on everything.
  */
 
@@ -58,17 +70,16 @@ textarea {
   padding: 0; /* 2 */
 }
 
-/*
+/**
  * Show the horizontal ruler as a 1px line of currentColor.
  */
 
 hr {
   border: 0;
   border-top: 1px solid currentColor;
-  color: inherit; /* Fix for Firefox */
 }
 
-/*
+/**
  * Drop all list bullets.
  */
 
@@ -77,24 +88,25 @@ ul {
   list-style: none;
 }
 
-/*
+/**
  * Reset anchor style.
  */
 
 a {
   color: inherit;
   text-decoration: none;
+  text-decoration-skip-ink: auto;
 }
 
-/*
- * Set cursor when hovering `abbr` with title.
+/**
+ * Show help cursor when hovering `abbr` with title.
  */
 
 abbr[title] {
   cursor: help;
 }
 
-/*
+/**
  * Reset italic in address element.
  */
 
@@ -102,7 +114,7 @@ address {
   font-style: normal;
 }
 
-/*
+/**
  * Customize `small` element's font-size.
  */
 
@@ -110,7 +122,7 @@ small {
   font-size: 0.75em;
 }
 
-/*
+/**
  * Reset weight and alignment of `th`.
  */
 
@@ -119,7 +131,7 @@ th {
   text-align: left;
 }
 
-/*
+/**
  * Remove fieldset border.
  */
 
@@ -127,7 +139,7 @@ fieldset {
   border: 0;
 }
 
-/*
+/**
  * Reset appearance from form controls.
  */
 
@@ -147,7 +159,15 @@ textarea {
   line-height: inherit;
 }
 
-/*
+/**
+ * Fix vertical alignment of textarea.
+ */
+
+textarea {
+  vertical-align: bottom;
+}
+
+/**
  * Remove clear button from text fields in IE/Legacy Edge.
  */
 
@@ -155,7 +175,7 @@ input::-ms-clear {
   display: none;
 }
 
-/*
+/**
  * Remove reveal button from password fields in IE/Legacy Edge.
  */
 
@@ -163,7 +183,7 @@ input[type="password"]::-ms-reveal {
   display: none;
 }
 
-/*
+/**
  * Remove number field spinners.
  */
 
@@ -176,7 +196,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: none;
 }
 
-/*
+/**
  * Reset `input` type color.
  */
 
@@ -196,7 +216,7 @@ input[type="color"]::-moz-color-swatch {
   border: 0;
 }
 
-/*
+/**
  * Reset `input` type file.
  */
 
@@ -206,7 +226,7 @@ input[type="file"] {
 input[type="file"]::-webkit-file-upload-button {
 }
 
-/*
+/**
  * Reset search fields.
  */
 
@@ -224,7 +244,7 @@ input[type="search"]::-ms-reveal {
   display: none;
 }
 
-/*
+/**
  * Reset `input` type range.
  */
 
@@ -259,7 +279,7 @@ input[type="range"]::-ms-thumb {
   border: 0;
 }
 
-/*
+/**
  * Reset progress meter.
  */
 
@@ -268,7 +288,6 @@ progress {
   background: none;
   border: 0;
   color: inherit;
-  vertical-align: middle;
 }
 
 progress::-webkit-progress-bar {
@@ -288,7 +307,7 @@ progress::-ms-fill {
   border: 0;
 }
 
-/*
+/**
  * Customize input placeholder.
  */
 
@@ -302,7 +321,7 @@ input:-ms-input-placeholder {
   opacity: 0.5;
 }
 
-/*
+/**
  * Customize focus outline.
  */
 
@@ -318,7 +337,7 @@ input:-ms-input-placeholder {
  * ========================================================================== */
 
 @media print {
-  /*
+  /**
    * Use larger text.
    */
 
@@ -326,7 +345,7 @@ input:-ms-input-placeholder {
     font-size: 13.5pt;
   }
 
-  /*
+  /**
    * Avoid page-breaks inside or right after headings.
    */
 
@@ -340,7 +359,7 @@ input:-ms-input-placeholder {
     break-after: avoid;
   }
 
-  /*
+  /**
    * 1. Prefer letter sized paper in portrait mode.
    * 2. Add some margin.
    */
