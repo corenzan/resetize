@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Test display of HTML elements</title>
-    <link rel="stylesheet" href="../dist/resetize.css" />
+    <link rel="stylesheet" href="../src/resetize.css" />
   </head>
   <body>
     <h1>This is a 1st level heading</h1>
@@ -15,86 +14,47 @@
     <h5>This is a 5th level heading</h5>
     <h6>This is a 6th level heading</h6>
     <p>
-      Lorem ipsum <strong>dolor sit amet</strong> consectetur,
-      <em>adipisicing elit</em>. Magni <abbr title="raione">ratione</abbr> rerum
-      <a href="#">laboriosam ipsam</a>. Et <cite>esse accusamus</cite> dolor
-      <code>tenetur quae cupiditate</code> dolorem architecto illum! Quisquam
-      provident illo cupiditate odit iure sed!
+      This is a paragraph with <strong>strong</strong>, <em>emphasis</em>,
+      <abbr title="Abbreviation">abbr</abbr>, <a href="#">anchor</a>,
+      <cite>citation</cite> and <code>code</code>.
     </p>
     <hr />
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ipsa
-      earum rem eligendi maxime eaque pariatur quasi. Nemo modi ut accusamus,
-      mollitia delectus vel optio, iste voluptates harum pariatur eius!
-    </div>
-    <pre>Nostrum odit architecto natus sequi rerum eius porro numquam.</pre>
+    <div>This is a div.</div>
+    <pre>This is a pre-formatted block.</pre>
     <blockquote>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam,
-        laborum atque mollitia deleniti error ad nulla aliquid delectus saepe
-        debitis, ullam eius asperiores quaerat architecto, expedita enim libero
-        quo quis.
-      </p>
+      <p>This is a paragraph in a blockquote.</p>
     </blockquote>
-    <address>
-      <a href="#">Lorem Ipsum</a>, <a href="#">lorem@ipsum.org</a><br />
-      Lorem ipsum, 123 &mdash; Dolor Sit, Amet
-    </address>
+    <address>This is an address block.</address>
     <hr />
     <ul>
-      <li>Lorem.</li>
-      <li>Ipsum.</li>
-      <li>
-        Dolor sit amet consectetur adipisicing elit. Animi minima quod incidunt
-        velit iusto nobis, error, rerum cum recusandae magnam, unde magni alias
-        eveniet aliquid ipsam! Nihil natus aperiam corporis!
-      </li>
+      <li>This is an unordered list item.</li>
+      <li>This is an unordered list item.</li>
+      <li>This is an unordered list item.</li>
     </ul>
-    <nav>
-      <ul>
-        <li>Lorem.</li>
-        <li>Ipsum.</li>
-        <li>
-          Dolor sit amet consectetur adipisicing elit. Animi minima quod
-          incidunt velit iusto nobis, error, rerum cum recusandae magnam, unde
-          magni alias eveniet aliquid ipsam! Nihil natus aperiam corporis!
-        </li>
-      </ul>
-    </nav>
     <ol>
-      <li>Lorem.</li>
-      <li>Ipsum.</li>
-      <li>
-        Dolor sit amet consectetur adipisicing elit. Animi minima quod incidunt
-        velit iusto nobis, error, rerum cum recusandae magnam, unde magni alias
-        eveniet aliquid ipsam! Nihil natus aperiam corporis!
-      </li>
+      <li>This is an ordered list item.</li>
+      <li>This is an ordered list item.</li>
+      <li>This is an ordered list item.</li>
     </ol>
     <dl>
-      <dt>recursion</dt>
-      <dd>see recursion</dd>
-      <dt>recursion, indirect</dt>
-      <dd>see indirect recursion</dd>
-      <dt>indirect recursion</dt>
-      <dd>see recursion, indirect</dd>
-      <dt>term</dt>
-      <dd>
-        a word or other expression taken into specific use in a well-defined
-        meaning, which is often defined rather rigorously, even formally, and
-        may differ quite a lot from an everyday meaning
-      </dd>
+      <dt>This is a term.</dt>
+      <dd>This is its definition.</dd>
+      <dt>This is a term.</dt>
+      <dd>This is its definition.</dd>
+      <dt>This is a term.</dt>
+      <dd>This is its definition.</dd>
     </dl>
     <hr />
     <form>
       <fieldset>
-        <legend>Lorem ipsum dolor sit amet</legend>
+        <legend>This is a fieldset</legend>
         <div>
-          <label> Hidden field: <input type="hidden" value="42" /> </label>
+          <label>Hidden field: <input type="hidden" value="42" /></label>
         </div>
         <div>
           <label>
-            Single-line text input field:
-            <input type="text" placeholder="This is placeholder" />
+            Text field:
+            <input type="text" placeholder="This is a placeholder" />
           </label>
         </div>
         <div>
@@ -135,7 +95,7 @@
         </div>
         <div>
           <label>
-            Progress meter in inderteminate value:
+            Progress meter with indeterminate value:
             <progress></progress>
           </label>
         </div>
@@ -147,56 +107,56 @@
         </div>
         <div>
           <label>
-            Multi-line text input field (textarea):<br />
+            Text area field:<br />
             <textarea cols="20" rows="2">Default text.</textarea>
           </label>
         </div>
       </fieldset>
       <fieldset>
-        <legend>Lorem ipsum dolor sit amet</legend>
+        <legend>This is another fieldset</legend>
         <div>
           <label>
-            <input type="radio" name="radio" value="1" />Lorem ipsum dolor sit
-            amet
+            <input type="radio" name="radio" value="1" />
+            This is an unchecked radio button
           </label>
         </div>
         <div>
           <label>
-            <input checked type="radio" name="radio" value="2" />Lorem ipsum
-            dolor sit amet (checked)
+            <input type="radio" name="radio" value="2" checked />
+            This is a checked radio button
           </label>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>Lorem ipsum dolor sit amet</legend>
-        <div>
-          <label> <input type="checkbox" />Lorem ipsum dolor sit amet </label>
         </div>
         <div>
           <label>
-            <input checked type="checkbox" />Lorem ipsum dolor sit amet
-            (checked)
+            <input type="checkbox" />
+            This is an unchecked checkbox
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" checked />
+            This is a checked checkbox
           </label>
         </div>
       </fieldset>
       <div>
         <label>
-          A <code>select</code> element (dropdown box):
+          This is a select field:
           <select>
-            <option>one</option>
-            <option selected>two (default)</option>
-            <option>three</option>
+            <option>This is an option</option>
+            <option selected>This is an option (default)</option>
+            <option>This is an option</option>
           </select>
         </label>
       </div>
       <div>
         <label>
-          A <code>select</code> element with <code>size="3"</code> (listbox):
+          This is a listbox:
           <br />
           <select size="3">
-            <option>one</option>
-            <option selected>two (default)</option>
-            <option>three</option>
+            <option>This is an option</option>
+            <option selected>This is an option (default)</option>
+            <option>This is an option</option>
           </select>
         </label>
       </div>
@@ -205,48 +165,26 @@
     <table>
       <thead>
         <tr>
-          <th>#</th>
-          <th>Char.</th>
-          <th>Explanation</th>
-          <th>Notes</th>
+          <th>A column header</th>
+          <th>Another column header</th>
+          <th>Another column header</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th>1</th>
-          <td>ê</td>
-          <td>e with circumflex</td>
-          <td>Latin 1 character, should be ok</td>
+          <th>A row header</th>
+          <td>A cell</td>
+          <td>Another cell</td>
         </tr>
         <tr>
-          <th>2</th>
-          <td>&#8212;</td>
-          <td>em dash</td>
-          <td>Windows Latin 1 character, should be ok, too</td>
+          <th>A row header</th>
+          <td>A cell</td>
+          <td>Another cell</td>
         </tr>
         <tr>
-          <th>3</th>
-          <td>&#x100;</td>
-          <td>A with macron (line above)</td>
-          <td>Latin Extended-A character, not present in all fonts</td>
-        </tr>
-        <tr>
-          <th>4</th>
-          <td>&Omega;</td>
-          <td>capital omega</td>
-          <td>A Greek letter</td>
-        </tr>
-        <tr>
-          <th>5</th>
-          <td>&#x2212;</td>
-          <td>minus sign</td>
-          <td>Unicode minus</td>
-        </tr>
-        <tr>
-          <th>6</th>
-          <td>&#x2300;</td>
-          <td>diameter sign</td>
-          <td>relatively rare in fonts</td>
+          <th>A row header</th>
+          <td>A cell</td>
+          <td>Another cell</td>
         </tr>
       </tbody>
     </table>
