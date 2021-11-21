@@ -3,53 +3,243 @@
  *! https://github.com/corenzan/resetize
  */
 
-/**
- * Inherit sanitize.css.
- */
+/* Hard reset and inherit box model by default. */
 
-@import "sanitize.css";
-
-/**
- * Use the default user interface font in all browsers (opinionated).
- */
-
-html {
-  font-family: system-ui, /* macOS 10.11-10.12 */ -apple-system,
-    /* Windows 6+ */ "Segoe UI", /* Android 4+ */ "Roboto",
-    /* Ubuntu 10.10+ */ "Ubuntu", /* Gnome 3+ */ "Cantarell",
-    /* KDE Plasma 5+ */ "Noto Sans", /* fallback */ sans-serif,
-    /* macOS emoji */ "Apple Color Emoji", /* Windows emoji */ "Segoe UI Emoji",
-    /* Windows emoji */ "Segoe UI Symbol", /* Linux emoji */ "Noto Color Emoji";
+*,
+*::after,
+*::before {
+  all: unset;
+  box-sizing: inherit;
 }
 
-/**
- * Use smooth scroll but only when on focus to avoid issues with find in page.
- */
+/* Fix inheritance in pseudo-elements. */
+
+::before,
+::after {
+  font: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+/* Hide non-content elements. */
+
+base,
+basefont,
+datalist,
+head,
+meta,
+script,
+style,
+title,
+noembed,
+param,
+template {
+  display: none;
+}
+
+/* Restore block level elements. */
+
+address,
+article,
+aside,
+blockquote,
+dd,
+details,
+dialog,
+div,
+dl,
+dt,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+header,
+hgroup,
+hr,
+li,
+main,
+nav,
+ol,
+p,
+pre,
+section,
+table,
+ul {
+  display: block;
+}
+
+/* Reset form controls. */
+
+input[type="number"] {
+  appearance: textfield; /* Fix for Firefox. No, nothing else works. */
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  all: unset;
+}
+
+::-webkit-color-swatch-wrapper {
+  all: unset;
+}
+
+::-webkit-color-swatch {
+  all: unset;
+}
+
+::-moz-color-swatch {
+  all: unset;
+}
+
+::-webkit-file-upload-button {
+  all: unset;
+}
+
+::-webkit-search-cancel-button,
+::-webkit-search-results-button,
+::-webkit-search-results-decoration {
+  all: unset;
+}
+
+::-webkit-slider-thumb {
+  all: unset;
+}
+
+::-webkit-slider-runnable-track {
+  all: unset;
+}
+
+::-moz-range-thumb {
+  all: unset;
+}
+
+::-moz-range-track {
+  all: unset;
+}
+
+::-moz-range-progress {
+  all: unset;
+}
+
+::-webkit-datetime-edit-fields-wrapper {
+  all: unset;
+}
+
+::-webkit-calendar-picker-indicator {
+  all: unset;
+}
+
+::-webkit-progress-bar {
+  all: unset;
+}
+
+::-webkit-progress-value {
+  all: unset;
+}
+
+::-moz-progress-bar {
+  all: unset;
+}
+
+/* Fix text wrapping. */
+
+pre,
+textarea {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Fix issues with box height. */
+
+input,
+select,
+textarea {
+  vertical-align: bottom;
+}
+
+textarea {
+  resize: auto;
+}
+
+/* Enable smooth scroll avoiding issues with find in page. */
 
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-/**
- * Use the default monospace user interface font in all browsers (opinionated).
- */
+/* Nicer defaults. */
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  cursor: default;
+  font-family: sans-serif;
+  line-height: 1.5;
+  overflow-wrap: break-word;
+  tab-size: 4;
+  text-size-adjust: 100%;
+}
+
+pre {
+  overflow: auto;
+}
+
+abbr[title] {
+  cursor: help;
+  text-decoration: underline dotted;
+}
+
+small {
+  font-size: 0.75em;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+a {
+  cursor: pointer;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
 
 code,
 kbd,
 samp,
 pre {
-  font-family:
-    /* macOS 10.10+ */ "Menlo", /* Windows 6+ */ "Consolas",
-    /* Android 4+ */ "Roboto Mono", /* Ubuntu 10.10+ */ "Ubuntu Monospace",
-    /* KDE Plasma 5+ */ "Noto Mono", /* KDE Plasma 4+ */ "Oxygen Mono",
-    /* Linux/OpenOffice fallback */ "Liberation Mono", /* fallback */ monospace,
-    /* macOS emoji */ "Apple Color Emoji", /* Windows emoji */ "Segoe UI Emoji",
-    /* Windows emoji */ "Segoe UI Symbol", /* Linux emoji */ "Noto Color Emoji";
+  font-family: monospace;
 }
 
-/**
- * Restrict sizing to the page width in all browsers (opinionated).
- */
+sub,
+sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Constraint dimensions of embedded content. */
 
 iframe,
 img,
@@ -60,270 +250,26 @@ textarea {
   max-width: 100%;
 }
 
-/**
- * Reset font-size, padding and margin on everything.
- */
+/* Fix text indentation in tables. */
 
-* {
-  font-size: 1em; /* 1 */
-  margin: 0; /* 2 */
-  padding: 0; /* 2 */
+table {
+  text-indent: 0;
 }
 
-/**
- * Show the horizontal ruler as a 1px line of currentColor.
- */
+/* Remove the inner border and padding in Firefox. */
 
-hr {
-  border: 0;
-  border-top: 1px solid currentColor;
-}
-
-/**
- * Drop all list bullets.
- */
-
-ol,
-ul {
-  list-style: none;
-}
-
-/**
- * Reset anchor style.
- */
-
-a {
-  color: inherit;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
-}
-
-/**
- * Show help cursor when hovering `abbr` with title.
- */
-
-abbr[title] {
-  cursor: help;
-}
-
-/**
- * Reset italic in address element.
- */
-
-address {
-  font-style: normal;
-}
-
-/**
- * Customize `small` element's font-size.
- */
-
-small {
-  font-size: 0.75em;
-}
-
-/**
- * Reset weight and alignment of `th`.
- */
-
-th {
-  font-weight: normal;
-  text-align: left;
-}
-
-/**
- * Remove fieldset border.
- */
-
-fieldset {
-  border: 0;
-}
-
-/**
- * Reset appearance from form controls.
- */
-
-button,
-input,
-select,
-textarea {
-  appearance: none;
-  background: none;
-  border: 0;
-  color: inherit;
-  display: inline-block;
-  font-family: inherit;
-  font-size: inherit;
-  font-style: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-}
-
-/**
- * Fix vertical alignment of textarea.
- */
-
-textarea {
-  vertical-align: bottom;
-}
-
-/**
- * Remove clear button from text fields in IE/Legacy Edge.
- */
-
-input::-ms-clear {
-  display: none;
-}
-
-/**
- * Remove reveal button from password fields in IE/Legacy Edge.
- */
-
-input[type="password"]::-ms-reveal {
-  display: none;
-}
-
-/**
- * Remove number field spinners.
- */
-
-input[type="number"] {
-  -moz-appearance: textfield; /* Fix for Firefox */
-}
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  display: none;
-}
-
-/**
- * Reset `input` type color.
- */
-
-input[type="color"] {
-  vertical-align: middle;
-}
-
-input[type="color"]::-webkit-color-swatch-wrapper {
+::-moz-focus-inner {
+  border-style: none;
   padding: 0;
 }
 
-input[type="color"]::-webkit-color-swatch {
-  border: 0;
+/* Reset invalid style in Firefox. */
+
+:-moz-ui-invalid {
+  box-shadow: none;
 }
 
-input[type="color"]::-moz-color-swatch {
-  border: 0;
-}
-
-/**
- * Reset `input` type file.
- */
-
-input[type="file"] {
-}
-
-input[type="file"]::-webkit-file-upload-button {
-}
-
-/**
- * Reset search fields.
- */
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  display: none;
-}
-
-input[type="search"]::-ms-clear {
-  display: none;
-}
-
-input[type="search"]::-ms-reveal {
-  display: none;
-}
-
-/**
- * Reset `input` type range.
- */
-
-input[type="range"] {
-  vertical-align: middle;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
-input[type="range"]::-webkit-slider-runnable-track {
-}
-
-input[type="range"]::-moz-range-thumb {
-  background: none;
-  border: 0;
-  border-radius: 0;
-}
-
-input[type="range"]::-moz-range-track {
-}
-
-input[type="range"]::-moz-range-progress {
-}
-
-input[type="range"]::-ms-track {
-}
-
-input[type="range"]::-ms-thumb {
-  background: none;
-  border: 0;
-}
-
-/**
- * Reset progress meter.
- */
-
-progress {
-  appearance: none;
-  background: none;
-  border: 0;
-  color: inherit;
-}
-
-progress::-webkit-progress-bar {
-  background: none;
-}
-
-progress::-webkit-progress-value {
-  background: none;
-}
-
-progress::-moz-progress-bar {
-  background: none;
-}
-
-progress::-ms-fill {
-  background: none;
-  border: 0;
-}
-
-/**
- * Customize input placeholder.
- */
-
-input::placeholder {
-  color: inherit;
-  opacity: 0.5;
-}
-
-input:-ms-input-placeholder {
-  color: inherit;
-  opacity: 0.5;
-}
-
-/**
- * Customize focus outline.
- */
+/* Accessbility defaults. */
 
 :-moz-focusring {
   outline: 1px dotted currentColor;
@@ -333,39 +279,11 @@ input:-ms-input-placeholder {
   outline: 1px dotted currentColor;
 }
 
-/* Print
- * ========================================================================== */
+[aria-busy="true"] {
+  cursor: progress;
+}
 
-@media print {
-  /**
-   * Use larger text.
-   */
-
-  html {
-    font-size: 13.5pt;
-  }
-
-  /**
-   * Avoid page-breaks inside or right after headings.
-   */
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    break-inside: avoid;
-    break-after: avoid;
-  }
-
-  /**
-   * 1. Prefer letter sized paper in portrait mode.
-   * 2. Add some margin.
-   */
-
-  @page {
-    size: letter portrait; /* 1 */
-    margin: 12.5%; /* 2 */
-  }
+[aria-disabled="true"],
+[disabled] {
+  cursor: not-allowed;
 }

@@ -3,6 +3,10 @@
   "version": "28.0.0",
   "description": "CSS normalization with opinionated resets.",
   "style": "dist/resetize.css",
+  "main": "dist/resetize.css",
+  "targets": {
+    "main": false
+  },
   "files": [
     "README.md",
     "LICENSE.md",
