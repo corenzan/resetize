@@ -92,6 +92,10 @@ input[type="number"] {
   all: unset;
 }
 
+[list]::-webkit-calendar-picker-indicator {
+  list-style: none !important; /* Fix for input with list where the picker uses style attribute. */
+}
+
 ::-webkit-progress-bar {
   all: unset;
 }
