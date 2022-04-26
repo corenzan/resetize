@@ -210,9 +210,10 @@ textarea {
   max-width: 100%;
 }
 
-/* Fix text indentation in tables. */
+/* Faster rendering with easier styling, and fix text indentation in tables. */
 
 table {
+  table-layout: fixed;
   text-indent: 0;
 }
 
