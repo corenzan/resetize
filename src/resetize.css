@@ -139,8 +139,7 @@ html:focus-within {
 html {
   -webkit-tap-highlight-color: transparent;
   cursor: default;
-  font-family: sans-serif;
-  line-height: 1.5;
+  font: 16px/1.5 system-ui, sans-serif;
   overflow-wrap: break-word;
   tab-size: 4;
   text-size-adjust: 100%;
