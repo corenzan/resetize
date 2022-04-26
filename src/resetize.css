@@ -3,13 +3,23 @@
  *! https://github.com/corenzan/resetize
  */
 
-/* Hard reset and inherit box model by default. */
+/* Define SVG namespace. */
+
+@namespace svg "http://www.w3.org/2000/svg";
+
+/* Hard reset everything that is not under SVG namespace but revert display property to browser's default. */
+
+:not(svg|*) {
+  all: unset;
+  display: revert;
+}
+
+/* Better control when setting width and height. */
 
 *,
-*::after,
-*::before {
-  all: unset;
-  box-sizing: inherit;
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* Fix inheritance in pseudo-elements. */
@@ -19,59 +29,6 @@
   font: inherit;
   text-decoration: inherit;
   vertical-align: inherit;
-}
-
-/* Hide non-content elements. */
-
-base,
-basefont,
-datalist,
-head,
-meta,
-script,
-style,
-title,
-noembed,
-param,
-template {
-  display: none;
-}
-
-/* Restore block level elements. */
-
-address,
-article,
-aside,
-blockquote,
-dd,
-details,
-dialog,
-div,
-dl,
-dt,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-header,
-hgroup,
-hr,
-li,
-main,
-nav,
-ol,
-p,
-pre,
-section,
-table,
-ul {
-  display: block;
 }
 
 /* Reset form controls. */
