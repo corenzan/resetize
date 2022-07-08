@@ -1,21 +1,22 @@
 /*! resetize.css v$npm_package_version
- *! The MIT License © 2014 Arthur Corenzan
+ *! MIT © 2014 Arthur Corenzan
  *! https://github.com/corenzan/resetize
  */
 
-/* Define SVG namespace. */
+/**
+ * Resets.
+ */
 
+/* Define SVG namespace. */
 @namespace svg "http://www.w3.org/2000/svg";
 
-/* Hard reset everything that is not under SVG namespace but revert display property to browser's default. */
-
+/* Hard reset everything that is not under SVG namespace but keep display to browser's default. */
 :not(svg|*) {
   all: unset;
   display: revert;
 }
 
-/* Better control when setting width and height. */
-
+/* Sizing includes padding and border. */
 *,
 *::before,
 *::after {
@@ -23,7 +24,6 @@
 }
 
 /* Fix inheritance in pseudo-elements. */
-
 ::before,
 ::after {
   font: inherit;
@@ -31,8 +31,7 @@
   vertical-align: inherit;
 }
 
-/* Reset form controls. */
-
+/* Remove all style from form controls. */
 input[type="number"] {
   appearance: textfield; /* Fix for Firefox. No, nothing else works. */
 }
@@ -92,7 +91,7 @@ input[type="number"] {
   all: unset;
 }
 
-[list]::-webkit-calendar-picker-indicator {
+input[list]::-webkit-calendar-picker-indicator {
   list-style: none !important; /* Fix for input with list where the picker uses style attribute. */
 }
 
@@ -109,7 +108,6 @@ input[type="number"] {
 }
 
 /* Fix text wrapping. */
-
 pre,
 textarea {
   white-space: pre-wrap;
@@ -117,7 +115,6 @@ textarea {
 }
 
 /* Fix issues with box height. */
-
 input,
 select,
 textarea {
@@ -129,18 +126,48 @@ textarea {
 }
 
 /* Enable smooth scroll avoiding issues with find in page. */
-
 html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Nicer defaults. */
+/* Constraint dimensions of embedded content. */
+iframe,
+img,
+input,
+select,
+textarea {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Faster rendering with easier styling. Fix text indentation in tables. */
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-indent: 0;
+}
+
+/* Remove the inner border and padding in Firefox. */
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/* Reset invalid style in Firefox. */
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+ * Nicer defaults. 
+ */
 
 html {
   -webkit-tap-highlight-color: transparent;
   cursor: default;
   font: 16px/1.5 system-ui, sans-serif;
   overflow-wrap: break-word;
+  scrollbar-gutter: stable;
   tab-size: 4;
   text-size-adjust: 100%;
 }
@@ -203,38 +230,9 @@ li {
   list-style: none;
 }
 
-/* Constraint dimensions of embedded content. */
-
-iframe,
-img,
-input,
-select,
-textarea {
-  height: auto;
-  max-width: 100%;
-}
-
-/* Faster rendering with easier styling, and fix text indentation in tables. */
-
-table {
-  table-layout: fixed;
-  text-indent: 0;
-}
-
-/* Remove the inner border and padding in Firefox. */
-
-::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-/* Reset invalid style in Firefox. */
-
-:-moz-ui-invalid {
-  box-shadow: none;
-}
-
-/* Accessbility defaults. */
+/**
+ * Accessbility defaults.
+ */
 
 :-moz-focusring {
   outline: 1px dotted currentColor;
@@ -248,7 +246,9 @@ table {
   cursor: progress;
 }
 
-[aria-disabled="true"],
-[disabled] {
+[disabled],
+[aria-disabled="true"] {
   cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
 }
