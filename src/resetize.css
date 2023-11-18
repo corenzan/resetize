@@ -115,7 +115,7 @@ summary {
   display: revert;
 }
 
-/* Better control when setting width and height. */
+/* Better control when sizing elements. */
 
 *,
 *::before,
@@ -138,9 +138,10 @@ summary {
   display: none;
 }
 
+/* Reset form controls and their accessories. */
 
 input[type="number"] {
-  appearance: textfield; /* Fix for Firefox. No, nothing else works. */
+  appearance: textfield; /* Fix for Firefox. Nothing else works. */
 }
 
 ::-webkit-inner-spin-button,
@@ -222,13 +223,15 @@ textarea {
   word-wrap: break-word;
 }
 
-/* Fix issues with box height. */
+/* Fix form controls inline alignment. */
 
 input,
 select,
 textarea {
   vertical-align: bottom;
 }
+
+/* Enable resizing of textarea. */
 
 textarea {
   resize: auto;
@@ -238,7 +241,7 @@ textarea {
 
 @media (prefers-reduced-motion: no-preference) {
   html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
   }
 }
 
