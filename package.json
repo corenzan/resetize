@@ -1,6 +1,6 @@
 {
   "name": "resetize",
-  "version": "31.0.0",
+  "version": "31.1.0",
   "description": "CSS normalization with opinionated resets.",
   "style": "dist/resetize.css",
   "main": "dist/resetize.css",
