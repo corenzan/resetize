@@ -10,7 +10,8 @@
   "files": [
     "README.md",
     "LICENSE.md",
-    "dist/resetize.css"
+    "dist/resetize.css",
+    "dist/resetize.css.map"
   ],
   "source": "src/resetize.css",
   "scripts": {
