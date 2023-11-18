@@ -348,7 +348,7 @@ table {
   outline: 1px dotted currentColor;
 }
 
-:focus {
+:focus-visible {
   outline: 1px dotted currentColor;
 }
 
