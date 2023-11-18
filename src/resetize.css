@@ -234,10 +234,12 @@ textarea {
   resize: auto;
 }
 
-/* Enable smooth scroll avoiding issues with find in page. */
+/* Enable smooth scroll, but avoid issues with find in page. */
 
-html:focus-within {
+@media (prefers-reduced-motion: no-preference) {
+  html {
   scroll-behavior: smooth;
+  }
 }
 
 /* Nicer defaults. */
@@ -357,4 +359,14 @@ table {
 [aria-disabled="true"],
 [disabled] {
   cursor: not-allowed;
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.1ms !important;
+    scroll-behavior: auto !important;
+  }
 }
