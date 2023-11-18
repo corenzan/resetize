@@ -277,6 +277,8 @@ i {
 }
 
 a {
+  text-decoration-skip-ink: auto;
+}
   cursor: pointer;
 }
 
