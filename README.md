@@ -7,7 +7,7 @@ The goals of **resetize.css** are:
 1. Have the least possible interference from browser styles while building your design.
 2. Fix common issues with browser styles.
 3. Have a few generally accepted opinionated defaults.
-4. Focused on modern browsers.
+4. Focus on modern browsers.
 
 ## References
 
