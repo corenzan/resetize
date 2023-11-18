@@ -4,18 +4,21 @@
 
 The goals of **resetize.css** are:
 
-1. Have the least possible interference from browser styles when building your designs.
-2. Fix issues with browser styles.
-3. Start from my a few common defaults.
-4. Support only modern browsers.
+1. Have the least possible interference from browser styles while building your design.
+2. Fix common issues with browser styles.
+3. Have a few generally accepted opinionated defaults.
+4. Focused on modern browsers.
 
-## Thanks
+## References
 
-This project was influenced by:
+Here are some of the projects, posts, and people that helped me achieve these goals:
 
-- [normalize.css](https://necolas.github.io/normalize.css/)
-- [sanitize.css](https://csstools.github.io/sanitize.css/)
-- [modern-normalize.css](https://github.com/sindresorhus/modern-normalize)
+- <https://necolas.github.io/normalize.css>
+- <https://csstools.github.io/sanitize.css>
+- <https://github.com/sindresorhus/modern-normalize>
+- <https://andy-bell.co.uk/a-modern-css-reset>
+- <https://andy-bell.co.uk/a-more-modern-css-reset/>
+- <https://twitter.com/csswizardry/status/1717841334462005661>
 
 ## License
 
