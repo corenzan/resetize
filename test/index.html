@@ -18,7 +18,17 @@
       <abbr title="Abbreviation">abbr</abbr>, <a href="#">anchor</a>,
       <cite>citation</cite> and <code>code</code>.
     </p>
+    <p aria-busy="true">This is loading.</p>
     <hr />
+    <img src="broken.jpg" alt="This is a broken image" />
+    <div>
+      This is an SVG:
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="20">
+        <rect x="10" y="10" width="80" height="80" />
+      </svg>
+    </div>
+    <hr />
+    <div hidden>This should be hidden.</div>
     <div>This is a div.</div>
     <pre>This is a pre-formatted block.</pre>
     <blockquote>
@@ -54,7 +64,13 @@
         <div>
           <label>
             Text field:
-            <input type="text" placeholder="This is a placeholder" />
+            <input type="text" placeholder="This is a text field" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Disabled field:
+            <input type="text" placeholder="This is disabled" disabled />
           </label>
         </div>
         <div>
