@@ -237,6 +237,13 @@ textarea {
   resize: auto;
 }
 
+/* Hide list bullets. */
+
+details,
+li {
+  list-style: none;
+}
+
 /* Enable smooth scroll, but avoid issues with find in page. */
 
 @media (prefers-reduced-motion: no-preference) {
@@ -313,10 +320,6 @@ sub {
 
 sup {
   top: -0.5em;
-}
-
-li {
-  list-style: none;
 }
 
 /* Constraint dimensions of embedded content. */
