@@ -14,7 +14,7 @@
   ],
   "source": "src/resetize.css",
   "scripts": {
-    "test": "parcel test/index.html --open",
+    "test": "parcel test/index.html",
     "watch": "parcel",
     "build": "parcel build",
     "postbuild": "sed -i -e \"s/\\$npm_package_version/$npm_package_version/\" dist/resetize.css"
@@ -29,6 +29,6 @@
   },
   "homepage": "https://github.com/corenzan/resetize#readme",
   "devDependencies": {
-    "parcel": "^2.0"
+    "parcel": "^2.10"
   }
 }
