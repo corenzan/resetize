@@ -313,13 +313,27 @@ li {
 
 /* Constraint dimensions of embedded content. */
 
+audio,
+embed,
 iframe,
 img,
-input,
-select,
-textarea {
+object,
+svg,
+video {
   height: auto;
   max-width: 100%;
+  vertical-align: middle;
+}
+
+/* Improve missing image styles and text contour. */
+
+img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-style: italic;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  shape-margin: 0.75rem;
 }
 
 /* Faster rendering with easier styling, and fix text indentation in tables. */
