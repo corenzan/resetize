@@ -132,7 +132,12 @@ summary {
   vertical-align: inherit;
 }
 
-/* Reset form controls. */
+/* Fix hidden elements. */
+
+[hidden] {
+  display: none;
+}
+
 
 input[type="number"] {
   appearance: textfield; /* Fix for Firefox. No, nothing else works. */
